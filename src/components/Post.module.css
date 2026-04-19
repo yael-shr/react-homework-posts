@@ -1,0 +1,89 @@
+/* מיכל הפוסט - מראה מודרני עם גרדיאנט עדין בקצה */
+.postCard {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    margin: 25px auto;
+    max-width: 550px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #eef2f6;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.postCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* פס צבע דקורטיבי בצד הפוסט */
+.postCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #4facfe 0%, #00f2fe 100%);
+}
+
+.postHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.postAuthor {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.postBody {
+    font-size: 1.05rem;
+    color: #546e7a;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    padding: 10px 5px;
+    background-color: #f8faff;
+    border-radius: 8px;
+}
+
+/* אזור העריכה */
+.postEditArea {
+    border-top: 2px dashed #eceff1;
+    padding-top: 20px;
+}
+
+.postInput {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e0e6ed;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #37474f;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.postInput:focus {
+    border-color: #4facfe;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.3);
+}
+
+/* הודעת עזר קטנה מעל האינפוט */
+.editLabel {
+    display: block;
+    font-size: 0.8rem;
+    color: #90a4ae;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
